@@ -18,5 +18,9 @@ Suggests:
     knitr,
     rmarkdown,
     covr,
-    snapmeta
+    snapmeta,
+    apputils
+Remotes:
+    leonawicz/snapmeta,
+    leonawicz/apputils
 VignetteBuilder: knitr
