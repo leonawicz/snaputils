@@ -1,3 +1,154 @@
+snapps_metadata <- list(
+  labels = c(
+    "Climate distributions", "Alaska wildfire projections", "Climate model analysis",
+    "Community climate outlooks", "Leaflet and Shiny observers", "Northwest Territories",
+    "Alaska sea ice maps", "CMIP3/CMPI5 climate", "Alaska daily precipitation",
+    "Alaska & Canada climate", "GBM example", "Monty Hall", "plot3D examples", "Random Forest example",
+    "ALFRESCO launcher", "Alaska weather stations", "Random variables v1", "Random variables v2",
+    "Random variables v3", "Random variables v4", "Sea ice coverage", "Sea ice and winds",
+    "Temperature and winds", "Tree rings"),
+  titles = c(
+    "CMIP5 regional climate", "Wildfire projections", "CMIP5 climate models",
+    "Localized projections", "Interactive documents", "NT climate projections",
+    "Sea ice edge maps",
+    "Downscaled climate",
+    "Historical dailies",
+    "Climate projections",
+    "GBM in Shiny",
+    "Generalized Monty Hall",
+    "plot3D and rgl examples",
+    "Random Forest in Shiny",
+    "Shiny ALFRESCO launcher",
+    "Weather and climate",
+    rep("RV distributions", 4),
+    "Sea ice extent",
+    "Sea ice and winds",
+    "Temperature and winds",
+    "Tree rings data sample"),
+  subtitles = c(
+    "Full spatial distributions", "ALFRESCO model output", "GCM evaluation results",
+    "Alaska & western Canada", "Leaflet + Shiny observers", "Regional + community level",
+    "Monthly and decadal extents",
+    "CMIP3/CMPI5 comparisons",
+    "Alaska weather stations",
+    "Alaska & western Canada",
+    "Minimal example",
+    "Minimal example",
+    "Explore 3D plots in Shiny",
+    "Minimal example",
+    "Inactive but explorable",
+    "Compare station and CRU",
+    "Version 1",
+    "Version 2",
+    "Version 3",
+    "Version 4",
+    "Temporal and spatial data",
+    "Sea ice and winds",
+    "Compare extreme thresholds",
+    "Simple app example"),
+  app_urls = paste0(
+    "https://uasnap.shinyapps.io/",
+    c("climdist", "jfsp-v10", "ar5eval", "cc4liteFinal", "ex_leaflet", "nwtapp", "ak_ice_edge",
+      "#",
+      "ak_daily_precipitation", "akcan_climate", "gbm_example", "monty_hall",
+      "plot3D", "random_forest_example",
+      "#",
+      "ak_station_cru_eda", "RV_distributions", "RV_distributionsV2", "RV_distributionsV3",
+      "RV_distributionsV4", "sea_ice_coverage", "sea_ice_winds", "temp_wind_events", "tree_rings")),
+  img_urls = c(
+    "https://raw.githubusercontent.com/leonawicz/dash/master/images/_climdist_small.png",
+    "https://raw.githubusercontent.com/leonawicz/jfsp/master/_jfsp_small.png",
+    "https://raw.githubusercontent.com/leonawicz/ar5eval/master/_ar5eval_small.png",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/cc4liteFinal.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ex_leaflet.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/nwtapp.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ak_ice_edge.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ar4ar5.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ak_daily_precipitation.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/akcan_climate.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/gbm_example.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/monty_hall.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/plot3D.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/random_forest_example.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/run_alfresco.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ak_station_cru_eda.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/RV_distributions.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/RV_distributionsV2.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/RV_distributionsV3.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/RV_distributionsV4.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/sea_ice_coverage.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/sea_ice_winds.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/temp_wind_events.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/tree_rings.jpg"),
+  gh_urls = c(
+    "https://github.com/leonawicz/dash/tree/master/climdist",
+    "https://github.com/leonawicz/jfsp",
+    "https://github.com/leonawicz/ar5eval/tree/master/ar5eval",
+    "https://github.com/ua-snap/shiny-apps/tree/master/cc4liteFinal",
+    "https://github.com/ua-snap/shiny-apps/tree/master/idocs/ex_leaflet",
+    "https://github.com/leonawicz/nwtapp",
+    "https://github.com/ua-snap/shiny-apps/tree/master/ak_ice_edge",
+    "https://github.com/ua-snap/shiny-apps/tree/master/ar4ar5",
+    "https://github.com/ua-snap/shiny-apps/tree/master/ak_daily_precipitation",
+    "https://github.com/ua-snap/shiny-apps/tree/master/akcan_climate",
+    "https://github.com/ua-snap/shiny-apps/tree/master/gbm_example",
+    "https://github.com/ua-snap/shiny-apps/tree/master/monty_hall",
+    "https://github.com/ua-snap/shiny-apps/tree/master/plot3D",
+    "https://github.com/ua-snap/shiny-apps/tree/master/random_forest_example",
+    "https://github.com/ua-snap/shiny-apps/tree/master/run_alfresco",
+    "https://github.com/ua-snap/shiny-apps/tree/master/ak_station_cru_eda",
+    "https://github.com/ua-snap/shiny-apps/tree/master/RV_distributions",
+    "https://github.com/ua-snap/shiny-apps/tree/master/RV_distributionsV2",
+    "https://github.com/ua-snap/shiny-apps/tree/master/RV_distributionsV3",
+    "https://github.com/ua-snap/shiny-apps/tree/master/RV_distributionsV4",
+    "https://github.com/ua-snap/shiny-apps/tree/master/sea_ice_coverage",
+    "https://github.com/ua-snap/shiny-apps/tree/master/sea_ice_winds",
+    "https://github.com/ua-snap/shiny-apps/tree/master/temp_wind_events",
+    "https://github.com/ua-snap/shiny-apps/tree/master/tree_rings")
+)
+
+#' Get urls related to SNAP Shiny apps
+#'
+#' This function returns a list of urls related to SNAP Shiny apps.
+#'
+#' App urls are for the hosted apps. Image urls are to thumbnail images representing each app.
+#' GitHub urls are to the code repositories related to each app.
+#'
+#' @param type character, \code{"app"}, \code{"img"} or \code{"gh"}.
+#'
+#' @return a vector of url strings.
+#' @export
+#'
+#' @examples
+#' snapps_urls()
+snapps_urls <- function(type = "app"){
+  switch(type,
+         "app" = snapps_metadata$app_urls,
+         "img" = snapps_metadata$img_urls,
+         "gh" - snapps_metadata$gh_urls)
+}
+
+#' Get heading information related to SNAP Shiny apps
+#'
+#' This function returns a list of headings related to SNAP Shiny apps.
+#'
+#' Labels are generally shown above an app showcase widget. Titles are generally the top line heading over the image link inside the widget.
+#' Subtitles are for smaller text below.
+#'
+#' @param type character, \code{"label"}, \code{"title"} or \code{"sub"}.
+#'
+#' @return a vector of headings.
+#' @export
+#'
+#' @examples
+#' snapps_titles("label")
+snapps_titles <- function(type){
+  switch(type,
+         "label" = snapps_metadata$labels,
+         "title" = snapps_metadata$titles,
+         "sub" = snapps_metadata$subtitles)
+}
+
 #' Genrate SNAP apps showcase content
 #'
 #' This is a wrapper around \code{apputils::app_showcase}.
