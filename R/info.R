@@ -125,7 +125,7 @@ snapps_urls <- function(type = "app"){
   switch(type,
          "app" = snapps_metadata$app_urls,
          "img" = snapps_metadata$img_urls,
-         "gh" - snapps_metadata$gh_urls)
+         "gh" = snapps_metadata$gh_urls)
 }
 
 #' Get heading information related to SNAP Shiny apps
