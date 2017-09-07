@@ -8,7 +8,7 @@ snaputils
 `snaputils` contains utilities for Shiny app development. The package inherits primarily from `apputils`, which contains common utility functions, settings and references for use across multiple Shiny apps. It also imports `maputils`. As the name suggests, unlike the other two packages, `snaputils` is specific to a SNAP context. All three packages are satellite members of the SNAPverse collection of R packages.
 
 <p style="text-align:center;">
-<img src="man/figures/sv_satellites_utils_snap.png">
+<img src="man/figures/sv_satellites_utils_snap.png" width=350>
 </p>
 <br>
 
@@ -18,7 +18,7 @@ Installation and bug reporting
 Install the latest development version from github with
 
 ``` r
-# install.packages("devtools")
+# install.packages('devtools')
 devtools::install_github("leonawicz/snaputils")
 ```
 
@@ -30,7 +30,7 @@ Reference
 The complete set of satellite packages is shown below.
 
 <p style="text-align:center;">
-<img src="man/figures/sv_satellites_all.png">
+<img src="man/figures/sv_satellites_all.png" width=350>
 </p>
 <br>
 
