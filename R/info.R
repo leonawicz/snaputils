@@ -193,3 +193,48 @@ snapp_showcase <- function(drop = NULL){
   )
   do.call(apputils::app_showcase, c(args, drop=list(drop)))
 }
+
+#' Wrapper around \code{apputils::contactinfo}
+#'
+#' This function makes a call to \code{apputils::contactinfo} using stored author contact info templates.
+#' This override requires that \code{snaputils} be loaded after \code{apputils}, but this is the meaningful
+#' order for loading these packages by their nature.
+#' Otherwise, \code{snapputils::contactinfo} would have to be called explicitly.
+#'
+#' The user must provide paths to SNAP, IARC and UAF logo images for branding.
+#' The logos may be contained in the \code{www/} directory or could be at a web url.
+#'
+#' @param id character, name of author template to use. Available templates: \code{"leonawicz"}.
+#' @param snap image url.
+#' @param iarc image url.
+#' @param uaf image url.
+#'
+#' @return a tag list.
+#' @export
+#'
+#' @examples
+#' \dontrun{contactinfo("leonawicz", "url1", "url2", "url3")}
+contactinfo <- function(id = "leonawicz", snap, iarc, uaf){
+  logo <- c(uaf, iarc, snap)
+  href <- c("http://www.uaf.edu", "https://web.iarc.uaf.edu", "https://www.snap.uaf.edu")
+
+  if(id == "leonawicz"){
+    links <- list(
+      GitHub.io = "https://leonawicz.github.io",
+      LinkedIn = "http://www.linkedin.com/in/leonawicz",
+      Twitter = "https://twitter.com/leonawicz",
+      Blog = "https://leonawicz.github.io/blog"
+    )
+    info <- apputils::contactinfo(
+      name = "Matthew Leonawicz",
+      role = "Statistician | R Developer",
+      photo = "https://www.gravatar.com/avatar/5ab20ebc3829054f8af7b1ea4a317269?s=128",
+      logo = logo, href = href,
+      links = links,
+      header = "Contact information",
+      footnote = "For questions about this application, please email mfleonawicz@alaska.edu",
+      logo_height = 170, photo_width = 128, photo_height = 128
+    )
+  }
+  info
+}
