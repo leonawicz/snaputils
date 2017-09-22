@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Get heading information related to SNAP Shiny apps — snapps_titles â€¢ snaputils</title>
+<title>Wrapper around <code><a href='http://www.rdocumentation.org/packages/apputils/topics/contactinfo'>apputils::contactinfo</a></code> — contactinfo â€¢ snaputils</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -188,47 +188,53 @@
       <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Get heading information related to SNAP Shiny apps</h1>
+    <h1>Wrapper around <code><a href='http://www.rdocumentation.org/packages/apputils/topics/contactinfo'>apputils::contactinfo</a></code></h1>
     </div>
 
     
-    <p>This function returns a list of headings related to SNAP Shiny apps.</p>
+    <p>This function makes a call to <code><a href='http://www.rdocumentation.org/packages/apputils/topics/contactinfo'>apputils::contactinfo</a></code> using stored author contact info templates.
+This override requires that <code>snaputils</code> be loaded after <code>apputils</code>, but this is the meaningful
+order for loading these packages by their nature.
+Otherwise, <code>snapputils::contactinfo</code> would have to be called explicitly.</p>
     
 
-    <pre class="usage"><span class='fu'>snapps_titles</span>(<span class='no'>type</span>)</pre>
+    <pre class="usage"><span class='fu'>contactinfo</span>(<span class='kw'>id</span> <span class='kw'>=</span> <span class='st'>"leonawicz"</span>, <span class='no'>snap</span>, <span class='no'>iarc</span>, <span class='no'>uaf</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>type</th>
-      <td><p>character, <code>"label"</code>, <code>"title"</code> or <code>"sub"</code>.</p></td>
+      <th>id</th>
+      <td><p>character, name of author template to use. Available templates: <code>"leonawicz"</code>.</p></td>
+    </tr>
+    <tr>
+      <th>snap</th>
+      <td><p>image url.</p></td>
+    </tr>
+    <tr>
+      <th>iarc</th>
+      <td><p>image url.</p></td>
+    </tr>
+    <tr>
+      <th>uaf</th>
+      <td><p>image url.</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>a vector of headings.</p>
+    <p>a tag list.</p>
     
     <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
 
-    <p>Labels are generally shown above an app showcase widget. Titles are generally the top line heading over the image link inside the widget.
-Subtitles are for smaller text below.</p>
+    <p>The user must provide paths to SNAP, IARC and UAF logo images for branding.
+The logos may be contained in the <code>www/</code> directory or could be at a web url.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>snapps_titles</span>(<span class='st'>"label"</span>)</div><div class='output co'>#&gt;  [1] "Climate distributions"       "Alaska wildfire projections"
-#&gt;  [3] "Climate model analysis"      "Community climate outlooks" 
-#&gt;  [5] "Leaflet and Shiny observers" "Northwest Territories"      
-#&gt;  [7] "Alaska sea ice maps"         "CMIP3/CMPI5 climate"        
-#&gt;  [9] "Alaska daily precipitation"  "Alaska &amp; Canada climate"    
-#&gt; [11] "GBM example"                 "Monty Hall"                 
-#&gt; [13] "plot3D examples"             "Random Forest example"      
-#&gt; [15] "ALFRESCO launcher"           "Alaska weather stations"    
-#&gt; [17] "Random variables v1"         "Random variables v2"        
-#&gt; [19] "Random variables v3"         "Random variables v4"        
-#&gt; [21] "Sea ice coverage"            "Sea ice and winds"          
-#&gt; [23] "Temperature and winds"       "Tree rings"                 </div></pre>
+    <pre class="examples"><span class='co'># NOT RUN {</span>
+<span class='fu'>contactinfo</span>(<span class='st'>"leonawicz"</span>, <span class='st'>"url1"</span>, <span class='st'>"url2"</span>, <span class='st'>"url3"</span>)
+<span class='co'># }</span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
