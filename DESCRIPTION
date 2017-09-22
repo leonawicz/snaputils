@@ -1,5 +1,5 @@
 Package: snaputils
-Version: 0.0.0.9000
+Version: 0.1.0
 Title: SNAP-Specific Utilities For Shiny Apps
 Description: Common utility functions, settings and references used across multiple Shiny apps
     specific to a SNAP context. This package inherents from the apputils package and is a 
