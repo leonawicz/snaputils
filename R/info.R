@@ -220,10 +220,10 @@ contactinfo <- function(id = "leonawicz", snap, iarc, uaf){
 
   if(id == "leonawicz"){
     links <- list(
-      GitHub.io = "https://leonawicz.github.io",
-      LinkedIn = "http://www.linkedin.com/in/leonawicz",
-      Twitter = "https://twitter.com/leonawicz",
-      Blog = "https://leonawicz.github.io/blog"
+      '<a href="https://leonawicz.github.io" target="_blank"><i class="fa fa-github fa-lg"></i></a>',
+      '<a href="http://www.linkedin.com/in/leonawicz" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>',
+      '<a href="https://twitter.com/leonawicz" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>',
+      '<a href="https://leonawicz.github.io/blog" target="_blank"><i class="fa fa-rss-square fa-lg"></i></a>'
     )
     info <- apputils::contactinfo(
       name = "Matthew Leonawicz",
