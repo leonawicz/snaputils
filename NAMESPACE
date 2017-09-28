@@ -3,5 +3,5 @@
 export(contactinfo)
 export(faq)
 export(snapp_showcase)
-export(snapps_titles)
-export(snapps_urls)
+export(snapp_titles)
+export(snapp_urls)
