@@ -3,6 +3,7 @@
 * Added `faq` override function. This function overrides rather than wraps around `apputils::faq`. It uses a SNAP FAQ dictionary inside `snaputils` so it does not take an external `faqlist` argument. It also allows for passing a `drop` argument on to `snapp_showcase`.
 * Tidied code and updated documentation.
 * Updated contact info template, now using FontAwesome icons.
+* Logos are now optional in any `contactinfo` template.
 
 # snaputils 0.1.0
 
