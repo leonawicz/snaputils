@@ -4,6 +4,8 @@ Title: SNAP-Specific Utilities For Shiny Apps
 Description: Common utility functions, settings and references used across multiple Shiny apps
     specific to a SNAP context. This package inherents from the apputils package and is a 
     satellite member of the SNAPverse collection of R packages.
+Author: Matthew Leonawicz [aut, cre]
+Maintainer: Matthew Leonawicz <mfleonawicz@alaska.edu>
 Authors@R: c(person("Matthew", "Leonawicz", email = "mfleonawicz@alaska.edu", role = c("aut", "cre")),
     person("Scenarios Network for Alaska and Arctic Planning", role = c("cph", "fnd"))
     )
