@@ -191,7 +191,7 @@ snapp_showcase <- function(drop = NULL){
       "Tree stand age projections"
     )
   )
-  do.call(apputils::app_showcase, c(args, drop=list(drop)))
+  do.call(apputils::app_showcase, c(args, drop = list(drop)))
 }
 
 #' Wrapper around \code{apputils::contactinfo}
