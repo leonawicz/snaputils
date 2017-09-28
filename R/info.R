@@ -219,19 +219,24 @@ contactinfo <- function(id = "leonawicz", snap, iarc, uaf){
   href <- c("http://www.uaf.edu", "https://web.iarc.uaf.edu", "https://www.snap.uaf.edu")
 
   if(id == "leonawicz"){
-    links <- list(
-      '<a href="https://leonawicz.github.io" target="_blank"><i class="fa fa-github fa-lg"></i></a>',
-      '<a href="http://www.linkedin.com/in/leonawicz" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>',
-      '<a href="https://twitter.com/leonawicz" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>',
-      '<a href="https://leonawicz.github.io/blog" target="_blank"><i class="fa fa-rss-square fa-lg"></i></a>'
+    urls <- c(
+      "https://leonawicz.github.io", "https://twitter.com/leonawicz",
+      "http://www.linkedin.com/in/leonawicz", "https://www.youtube.com/user/StatisticsWithR",
+      "https://plus.google.com/+StatisticsWithR/posts", "https://leonawicz.github.io/blog"
     )
+    icons <- c("github", "twitter", "linkedin", "youtube", "google-plus", "rss-square")
+    links <- list(paste0(
+      '<a href="', urls,
+      '" style="margin-right: 8px;" target="_blank"><i class="fa fa-',
+      icons, ' fa-lg"></i></a>', collapse = ""))
     info <- apputils::contactinfo(
       name = "Matthew Leonawicz",
       role = "Statistician | R Developer",
       photo = "https://www.gravatar.com/avatar/5ab20ebc3829054f8af7b1ea4a317269?s=128",
       logo = logo, href = href,
       links = links,
-      header = "Contact information",
+      heading = "Contact information",
+      heading_size = "h2",
       footnote = "For questions about this application, please email mfleonawicz@alaska.edu",
       logo_height = 170, photo_width = 128, photo_height = 128
     )
