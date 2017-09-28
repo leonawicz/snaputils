@@ -20,5 +20,5 @@ App urls are for the hosted apps. Image urls are to thumbnail images representin
 GitHub urls are to the code repositories related to each app.
 }
 \examples{
-snapps_urls()
+snapp_urls()
 }

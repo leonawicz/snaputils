@@ -120,7 +120,7 @@ snapp_metadata <- list(
 #' @export
 #'
 #' @examples
-#' snapps_urls()
+#' snapp_urls()
 snapp_urls <- function(type = "app"){
   switch(type,
          "app" = snapp_metadata$app_urls,
@@ -141,7 +141,7 @@ snapp_urls <- function(type = "app"){
 #' @export
 #'
 #' @examples
-#' snapps_titles("label")
+#' snapp_titles("label")
 snapp_titles <- function(type){
   switch(type,
          "label" = snapp_metadata$labels,
