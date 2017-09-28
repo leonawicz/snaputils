@@ -1,5 +1,5 @@
 Package: snaputils
-Version: 0.1.0
+Version: 0.2.0
 Title: SNAP-Specific Utilities For Shiny Apps
 Description: Common utility functions, settings and references used across multiple Shiny apps
     specific to a SNAP context. This package inherents from the apputils package and is a 
@@ -13,8 +13,11 @@ LazyData: true
 ByteCompile: true
 Url: https://github.com/leonawicz/snaputils
 BugReports: https://github.com/leonawicz/snaputils/issues
-Imports:
-    apputils
+Imports: 
+    apputils,
+    purrr,
+    shiny,
+    shinyBS
 Suggests: 
     testthat,
     knitr,
