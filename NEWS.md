@@ -1,4 +1,4 @@
-# snaputils 0.2.0
+# snaputils 0.2.0 (Release date: 2017-09-28)
 
 * Added `faq` override function. This function overrides rather than wraps around `apputils::faq`. It uses a SNAP FAQ dictionary inside `snaputils` so it does not take an external `faqlist` argument. It also allows for passing a `drop` argument on to `snapp_showcase`.
 * Tidied code and updated documentation.
