@@ -229,7 +229,7 @@ contactinfo <- function(id = "leonawicz", snap, iarc, uaf){
     href <- c(href, "https://www.snap.uaf.edu")
   }
 
-  if(id == "leonawicz"){
+  if(id %in% c("leonawicz", "leonawicz-teach")){
     urls <- c(
       "https://leonawicz.github.io", "https://twitter.com/leonawicz",
       "http://www.linkedin.com/in/leonawicz", "https://www.youtube.com/user/StatisticsWithR",
@@ -240,16 +240,25 @@ contactinfo <- function(id = "leonawicz", snap, iarc, uaf){
       '<a href="', urls,
       '" style="margin-right: 8px;" target="_blank"><i class="fa fa-',
       icons, ' fa-lg"></i></a>', collapse = ""))
+    photo_leo <- "https://www.gravatar.com/avatar/5ab20ebc3829054f8af7b1ea4a317269?s=128"
+    role_leo <- "Statistician | R Developer"
+  }
+
+  if(id == "leonawicz"){
     info <- apputils::contactinfo(
       name = "Matthew Leonawicz",
-      role = "Statistician | R Developer",
-      photo = "https://www.gravatar.com/avatar/5ab20ebc3829054f8af7b1ea4a317269?s=128",
-      logo = logo, href = href,
-      links = links,
+      role = role_leo, photo = photo_leo, logo = logo, href = href, links = links,
       heading = "Contact information",
-      heading_size = "h2",
-      footnote = "For questions about this application, please email mfleonawicz@alaska.edu",
-      logo_height = 170, photo_width = 128, photo_height = 128
+      footnote = "For questions about this application, please email mfleonawicz@alaska.edu"
+    )
+  }
+
+  if(id == "leonawicz-teach"){
+    info <- apputils::contactinfo(
+      name = "Matthew Leonawicz, MS",
+      role = role_leo, photo = photo_leo, logo = logo, href = href, links = links,
+      heading = "Instructor",
+      footnote = "Email: mfleonawicz@alaska.edu"
     )
   }
   info
