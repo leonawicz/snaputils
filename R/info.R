@@ -201,7 +201,7 @@ snapp_showcase <- function(drop = NULL){
 #' order for loading these packages by their nature.
 #' Otherwise, \code{snapputils::contactinfo} would have to be called explicitly.
 #'
-#' The user must provide paths to SNAP, IARC and UAF logo images for branding.
+#' The user may optionally provide paths to SNAP, IARC and UAF logo images for branding.
 #' The logos may be contained in the \code{www/} directory or could be at a web url.
 #'
 #' @param id character, name of author template to use. Available templates: \code{"leonawicz"}.
@@ -213,10 +213,21 @@ snapp_showcase <- function(drop = NULL){
 #' @export
 #'
 #' @examples
-#' \dontrun{contactinfo("leonawicz", "url1", "url2", "url3")}
+#' \dontrun{contactinfo()}
 contactinfo <- function(id = "leonawicz", snap, iarc, uaf){
-  logo <- c(uaf, iarc, snap)
-  href <- c("http://www.uaf.edu", "https://web.iarc.uaf.edu", "https://www.snap.uaf.edu")
+  logo <- href <- NULL
+  if(!missing(uaf)){
+    logo <- c(logo, uaf)
+    href <- c(href, "http://www.uaf.edu")
+  }
+  if(!missing(iarc)){
+    logo <- c(logo, iarc)
+    href <- c(href, "https://web.iarc.uaf.edu")
+  }
+  if(!missing(snap)){
+    logo <- c(logo, snap)
+    href <- c(href, "https://www.snap.uaf.edu")
+  }
 
   if(id == "leonawicz"){
     urls <- c(

@@ -25,9 +25,9 @@ order for loading these packages by their nature.
 Otherwise, \code{snapputils::contactinfo} would have to be called explicitly.
 }
 \details{
-The user must provide paths to SNAP, IARC and UAF logo images for branding.
+The user may optionally provide paths to SNAP, IARC and UAF logo images for branding.
 The logos may be contained in the \code{www/} directory or could be at a web url.
 }
 \examples{
-\dontrun{contactinfo("leonawicz", "url1", "url2", "url3")}
+\dontrun{contactinfo()}
 }
