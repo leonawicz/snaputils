@@ -258,7 +258,7 @@ contactinfo <- function(id = "leonawicz", snap, iarc, uaf){
       name = "Matthew Leonawicz, MS",
       role = role_leo, photo = photo_leo, logo = logo, href = href, links = links,
       heading = "Instructor",
-      footnote = "Email: mfleonawicz@alaska.edu<br>Phone: (XXX) XXX - XXXX"
+      footnote = c("Email: mfleonawicz@alaska.edu", "Phone: (XXX) XXX - XXXX")
     )
   }
   info
