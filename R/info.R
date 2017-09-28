@@ -1,4 +1,4 @@
-snapps_metadata <- list(
+snapp_metadata <- list(
   labels = c(
     "Climate distributions", "Alaska wildfire projections", "Climate model analysis",
     "Community climate outlooks", "Leaflet and Shiny observers", "Northwest Territories",
@@ -121,11 +121,11 @@ snapps_metadata <- list(
 #'
 #' @examples
 #' snapps_urls()
-snapps_urls <- function(type = "app"){
+snapp_urls <- function(type = "app"){
   switch(type,
-         "app" = snapps_metadata$app_urls,
-         "img" = snapps_metadata$img_urls,
-         "gh" = snapps_metadata$gh_urls)
+         "app" = snapp_metadata$app_urls,
+         "img" = snapp_metadata$img_urls,
+         "gh" = snapp_metadata$gh_urls)
 }
 
 #' Get heading information related to SNAP Shiny apps
@@ -142,11 +142,11 @@ snapps_urls <- function(type = "app"){
 #'
 #' @examples
 #' snapps_titles("label")
-snapps_titles <- function(type){
+snapp_titles <- function(type){
   switch(type,
-         "label" = snapps_metadata$labels,
-         "title" = snapps_metadata$titles,
-         "sub" = snapps_metadata$subtitles)
+         "label" = snapp_metadata$labels,
+         "title" = snapp_metadata$titles,
+         "sub" = snapp_metadata$subtitles)
 }
 
 #' Genrate SNAP apps showcase content
