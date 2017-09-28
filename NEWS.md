@@ -4,6 +4,7 @@
 * Tidied code and updated documentation.
 * Updated contact info template, now using FontAwesome icons.
 * Logos are now optional in any `contactinfo` template.
+* Added new template in `contactinfo`.
 
 # snaputils 0.1.0
 
