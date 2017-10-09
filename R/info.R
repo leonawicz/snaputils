@@ -1,6 +1,6 @@
 snapp_metadata <- list(
   labels = c(
-    "Climate distributions", "Alaska wildfire projections", "Climate model analysis",
+    "RV distributions", "Climate distributions", "Alaska wildfire projections", "Climate model analysis",
     "Community climate outlooks", "Leaflet and Shiny observers", "Northwest Territories",
     "Alaska sea ice maps", "CMIP3/CMPI5 climate", "Alaska daily precipitation",
     "Alaska & Canada climate", "GBM example", "Monty Hall", "plot3D examples", "Random Forest example",
@@ -8,7 +8,7 @@ snapp_metadata <- list(
     "Random variables v3", "Random variables v4", "Sea ice coverage", "Sea ice and winds",
     "Temperature and winds", "Tree rings"),
   titles = c(
-    "CMIP5 regional climate", "Wildfire projections", "CMIP5 climate models",
+    "Random variables", "CMIP5 regional climate", "Wildfire projections", "CMIP5 climate models",
     "Localized projections", "Interactive documents", "NT climate projections",
     "Sea ice edge maps",
     "Downscaled climate",
@@ -26,7 +26,7 @@ snapp_metadata <- list(
     "Temperature and winds",
     "Tree rings data sample"),
   subtitles = c(
-    "Full spatial distributions", "ALFRESCO model output", "GCM evaluation results",
+    "Probability distributions", "Full spatial distributions", "ALFRESCO model output", "GCM evaluation results",
     "Alaska & western Canada", "Leaflet + Shiny observers", "Regional + community level",
     "Monthly and decadal extents",
     "CMIP3/CMPI5 comparisons",
@@ -48,7 +48,7 @@ snapp_metadata <- list(
     "Simple app example"),
   app_urls = paste0(
     "https://uasnap.shinyapps.io/",
-    c("climdist", "jfsp-v10", "ar5eval", "cc4liteFinal", "ex_leaflet", "nwtapp", "ak_ice_edge",
+    c("rvdist", "climdist", "jfsp-v10", "ar5eval", "cc4liteFinal", "ex_leaflet", "nwtapp", "ak_ice_edge",
       "#",
       "ak_daily_precipitation", "akcan_climate", "gbm_example", "monty_hall",
       "plot3D", "random_forest_example",
@@ -56,6 +56,7 @@ snapp_metadata <- list(
       "ak_station_cru_eda", "RV_distributions", "RV_distributionsV2", "RV_distributionsV3",
       "RV_distributionsV4", "sea_ice_coverage", "sea_ice_winds", "temp_wind_events", "tree_rings")),
   img_urls = c(
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/rvdist.jpg",
     "https://raw.githubusercontent.com/leonawicz/dash/master/images/_climdist_small.png",
     "https://raw.githubusercontent.com/leonawicz/jfsp/master/_jfsp_small.png",
     "https://raw.githubusercontent.com/leonawicz/ar5eval/master/_ar5eval_small.png",
@@ -81,6 +82,7 @@ snapp_metadata <- list(
     "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/temp_wind_events.jpg",
     "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/tree_rings.jpg"),
   gh_urls = c(
+    "https://github.com/ua-snap/shiny-apps/tree/master/rvdist",
     "https://github.com/leonawicz/dash/tree/master/climdist",
     "https://github.com/leonawicz/jfsp",
     "https://github.com/leonawicz/ar5eval/tree/master/ar5eval",
@@ -163,15 +165,11 @@ snapp_titles <- function(type){
 snapp_showcase <- function(drop = NULL){
   args <- list(
     app_url = c(
-      "http://shiny.snap.uaf.edu/climdist",
-      "https://uasnap.shinyapps.io/jfsp-v10",
-      "https://uasnap.shinyapps.io/ar5eval",
-      "https://uasnap.shinyapps.io/cc4liteFinal",
-      "https://uasnap.shinyapps.io/ex_leaflet",
-      "https://uasnap.shinyapps.io/nwtapp",
-      "http://shiny.snap.uaf.edu/standage"
+      paste0("https://uasnap.shinyapps.io/",
+             c("rvdist", "climdist","jfsp-v10", "ar5eval", "cc4liteFinal", "ex_leaflet", "nwtapp", "standage"))
     ),
     img_url = c(
+      "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/rvdist.jpg",
       "https://raw.githubusercontent.com/leonawicz/dash/master/images/_climdist_small.png",
       "https://raw.githubusercontent.com/leonawicz/jfsp/master/_jfsp_small.png",
       "https://raw.githubusercontent.com/leonawicz/ar5eval/master/_ar5eval_small.png",
@@ -181,12 +179,12 @@ snapp_showcase <- function(drop = NULL){
       "https://raw.githubusercontent.com/leonawicz/agedist/master/_agedist_small.png"
     ),
     title = c(
-      "CMIP5 Regional Climate", "Alaska Wildfire Projections", "Climate Model Analysis",
+      "Random variables", "CMIP5 Regional Climate", "Alaska Wildfire Projections", "Climate Model Analysis",
       "Communities & Climate", "Interactive Documents", "Northwest Territories",
       "Alaska Vegetation Changes"
     ),
     subtitle = c(
-      "Full distributions", "ALFRESCO model output", "CMIP5 GCM evaluation",
+      "Probability distributions", "Full distributions", "ALFRESCO model output", "CMIP5 GCM evaluation",
       "Alaska & western Canada", "Leaflet + Shiny observers", "Climate projections",
       "Tree stand age projections"
     )
