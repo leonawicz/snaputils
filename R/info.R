@@ -166,7 +166,7 @@ snapp_showcase <- function(drop = NULL){
   args <- list(
     app_url = c(
       paste0("https://uasnap.shinyapps.io/",
-             c("rvdist", "climdist","jfsp-v10", "ar5eval", "cc4liteFinal", "ex_leaflet", "nwtapp", "standage"))
+             c("rvdist", "climdist", "jfsp-v10", "ar5eval", "cc4liteFinal", "ex_leaflet", "nwtapp", "standage"))
     ),
     img_url = c(
       "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/rvdist.jpg",
