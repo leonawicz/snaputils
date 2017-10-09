@@ -56,7 +56,7 @@ snapp_metadata <- list(
       "ak_station_cru_eda", "RV_distributions", "RV_distributionsV2", "RV_distributionsV3",
       "RV_distributionsV4", "sea_ice_coverage", "sea_ice_winds", "temp_wind_events", "tree_rings")),
   img_urls = c(
-    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/rvdist.jpg",
+    "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/rvdist.png",
     "https://raw.githubusercontent.com/leonawicz/dash/master/images/_climdist_small.png",
     "https://raw.githubusercontent.com/leonawicz/jfsp/master/_jfsp_small.png",
     "https://raw.githubusercontent.com/leonawicz/ar5eval/master/_ar5eval_small.png",
@@ -169,7 +169,7 @@ snapp_showcase <- function(drop = NULL){
              c("rvdist", "climdist", "jfsp-v10", "ar5eval", "cc4liteFinal", "ex_leaflet", "nwtapp", "standage"))
     ),
     img_url = c(
-      "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/rvdist.jpg",
+      "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/rvdist.png",
       "https://raw.githubusercontent.com/leonawicz/dash/master/images/_climdist_small.png",
       "https://raw.githubusercontent.com/leonawicz/jfsp/master/_jfsp_small.png",
       "https://raw.githubusercontent.com/leonawicz/ar5eval/master/_ar5eval_small.png",
