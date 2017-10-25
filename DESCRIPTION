@@ -22,13 +22,15 @@ Imports:
     dplyr,
     purrr,
     shiny,
-    shinyBS
+    shinyBS,
+    rvtable
 Suggests: 
     testthat,
     knitr,
     rmarkdown,
     covr
 Remotes:
+    leonawicz/rvtable,
     leonawicz/apputils
 VignetteBuilder: knitr
 RoxygenNote: 6.0.1
