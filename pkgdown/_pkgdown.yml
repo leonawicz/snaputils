@@ -36,6 +36,7 @@ reference:
   - brushed_ts
   - color_indexer
 - title: Plots
+  contents:
   - samplesize_factor
 
 navbar:
