@@ -1,3 +1,8 @@
+# snaputils 0.2.5 (Release date: 2017-10-25)
+
+* Ported several functions from `apputils` and refactored code.
+* Added package documentation.
+
 # snaputils 0.2.1 (Release date: 2017-10-09)
 
 * Update metadata for SNAP apps.
@@ -17,7 +22,3 @@
 * Added metadata content related to SNAP Shiny apps
 * Added related helper functions.
 * Added `snapp_showcase` wrapper function around `apputils::app_showcase`.
-
-# snaputils 0.0.0.9000
-
-* Added a `NEWS.md` file to track changes to the package.
