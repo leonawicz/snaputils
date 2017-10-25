@@ -12,6 +12,28 @@ authors:
     href: http://snap.uaf.edu/
     html: <img src="https://raw.githubusercontent.com/leonawicz/leonawicz.github.io/master/assets/img/snap_symbol.svg?sanitize=true" height="24" />  Scenarios Network for Alaska and Arctic Planning
 
+reference:
+- title: Package
+  contents:
+  - snaputils
+- title: Metadata
+  contents:
+  - snapp_titles
+  - snapp_urls
+- title: App information
+  contents:
+  - snapp_showcase
+  - contactinfo
+  - faq
+- title: Working with data frames
+  contents:
+  - dist_data
+  - clim_convert_round
+  - brushed_ts
+  - color_indexer
+- title: Plots
+  - samplesize_factor
+
 navbar:
   type: inverse
   right:
