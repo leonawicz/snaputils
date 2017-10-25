@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • snaputils</title>
+<title>SNAP-specific utilities for Shiny apps. � snaputils • snaputils</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -49,7 +49,7 @@
   </head>
 
   <body>
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="container">
@@ -189,157 +189,24 @@
       </header>
 
       <div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>
-        Reference
-        <small>version&nbsp;0.2.5</small>
-      </h1>
+    <h1>SNAP-specific utilities for Shiny apps.</h1>
     </div>
 
-    <div class="contents">
-      <table class="ref-index">
+    
+    <p>The <code>snaputils</code> package common utility functions, settings and references used across multiple Shiny apps
+specific to a SNAP context. This package inherents from the apputils package and is a satellite member of the SNAPverse collection of R packages.</p>
+    
 
-      <colgroup>
-        <col class="alias" />
-        <col class="title" />
-      </colgroup>
+        
 
-      <tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-package" class="hasAnchor"><a href="#section-package" class="anchor"></a>Package</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="snaputils.html">snaputils</a></code> </p>
-          </td>
-          <td><p>SNAP-specific utilities for Shiny apps.</p></td>
-        </tr>
-      </tbody><tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-metadata" class="hasAnchor"><a href="#section-metadata" class="anchor"></a>Metadata</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="snapp_titles.html">snapp_titles</a></code> </p>
-          </td>
-          <td><p>Get heading information related to SNAP Shiny apps</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="snapp_urls.html">snapp_urls</a></code> </p>
-          </td>
-          <td><p>Get urls related to SNAP Shiny apps</p></td>
-        </tr>
-      </tbody><tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-app-information" class="hasAnchor"><a href="#section-app-information" class="anchor"></a>App information</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="snapp_showcase.html">snapp_showcase</a></code> </p>
-          </td>
-          <td><p>Genrate SNAP apps showcase content</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="contactinfo.html">contactinfo</a></code> </p>
-          </td>
-          <td><p>Wrapper around <code><a href='http://www.rdocumentation.org/packages/apputils/topics/contactinfo'>apputils::contactinfo</a></code></p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="faq.html">faq</a></code> </p>
-          </td>
-          <td><p>Generate a SNAP Frequently Asked Questions (FAQ) widget</p></td>
-        </tr>
-      </tbody><tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-stat-boxes" class="hasAnchor"><a href="#section-stat-boxes" class="anchor"></a>Stat boxes</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stat_boxes.html">stat_boxes</a></code> </p>
-          </td>
-          <td><p>Generate a set of stat boxes.</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stat_boxes_group.html">stat_boxes_group</a></code> </p>
-          </td>
-          <td><p>Generate a group of stat boxes sets.</p></td>
-        </tr>
-      </tbody><tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-working-with-data-frames" class="hasAnchor"><a href="#section-working-with-data-frames" class="anchor"></a>Working with data frames</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="dist_data.html">dist_data</a></code> </p>
-          </td>
-          <td><p>Compile a specialized data frame based on the <code>rvtable</code> package</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="clim_convert_round.html">clim_convert_round</a></code> </p>
-          </td>
-          <td><p>Convert units and round data</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="brushed_ts.html">brushed_ts</a></code> </p>
-          </td>
-          <td><p>Filter data frame based on plot brush</p></td>
-        </tr>
-      </tbody><tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-plots" class="hasAnchor"><a href="#section-plots" class="anchor"></a>Plots</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="samplesize_factor.html">samplesize_factor</a></code> </p>
-          </td>
-          <td><p>Divide sample size by a factor based on the number of RCP-GCM combinations</p></td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-package">Package</a></li>
-      <li><a href="#section-metadata">Metadata</a></li>
-      <li><a href="#section-app-information">App information</a></li>
-      <li><a href="#section-stat-boxes">Stat boxes</a></li>
-      <li><a href="#section-working-with-data-frames">Working with data frames</a></li>
-      <li><a href="#section-plots">Plots</a></li>
-    </ul>
+                </ul>
+
   </div>
 </div>
 
