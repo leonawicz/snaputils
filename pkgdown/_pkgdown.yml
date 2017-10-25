@@ -34,7 +34,6 @@ reference:
   - dist_data
   - clim_convert_round
   - brushed_ts
-  - color_indexer
 - title: Plots
   contents:
   - samplesize_factor
