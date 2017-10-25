@@ -25,6 +25,10 @@ reference:
   - snapp_showcase
   - contactinfo
   - faq
+- title: Stat boxes
+  contents:
+  - stat_boxes
+  - stat_boxes_group
 - title: Working with data frames
   contents:
   - dist_data
