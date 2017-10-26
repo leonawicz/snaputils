@@ -141,7 +141,8 @@ dist_data <- function(data, variable, margin = NULL, seed = NULL, metric = NULL,
     if("Model" %in% m) data <- dplyr::mutate(data, Model = factor(lev.models[-1], levels = lev.models))
     if("RCP" %in% m){
       if(length(lev.rcps) == 1) lev.rcps <- rep(lev.rcps, 2) # historical always present
-      data.base <- dplyr::mutate(data.base, RCP = factor(as.character(.data[["RCP"]]), levels = unique(lev.rcps)))
+      if(nrow(data.base) > 0)
+        data.base <- dplyr::mutate(data.base, RCP = factor(as.character(.data[["RCP"]]), levels = unique(lev.rcps)))
       data <- dplyr::mutate(data, RCP = factor(
         ifelse(.data[["Year"]] < rcp_min_yr, lev.rcps[1], lev.rcps[2]), unique(lev.rcps)))
     }
