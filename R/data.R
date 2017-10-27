@@ -61,6 +61,7 @@
 #' @param margin_size numeric, sample size for marginalizing operations. Defaults to \code{100}.
 #' @param sample_size numeric, sample size for density estimations. Defaults to \code{margin.size}.
 #' @param limit_sample logical, see details.
+#' @param baseline_only logical, only processing baseline data set. Useful for climatology data.
 #' @param progress logical, include progress bar in app.
 #'
 #' @return a specialized data frame
@@ -73,7 +74,7 @@ dist_data <- function(data, variable, margin = NULL, seed = NULL, metric = NULL,
                       baseline_scenario = "Historical", general_scenario = "Projected",
                       margin_drop = c(baseline_scenario, baseline_model),
                       density_size = 200, margin_size = 100, sample_size = margin_size,
-                      limit_sample = TRUE, progress = TRUE){
+                      limit_sample = TRUE, baseline_only = FALSE, progress = TRUE){
   valid_variables <- c("pr", "tas", "tasmin", "tasmax")
   required_vars <- c("Val", "Prob", "RCP", "Model", "Var", "Year")
   if(!variable %in% valid_variables) stop("Invalid variable.")
@@ -81,7 +82,7 @@ dist_data <- function(data, variable, margin = NULL, seed = NULL, metric = NULL,
     stop(paste0("data must contain columns: ", paste(required_vars, collapse = ", "), "."))
   if(length(unique(data$Var)) > 1) stop("Data frame must contain only one 'Var' variable.")
   if(is.numeric(seed)) set.seed(seed)
-  m <- .check_marginalize(data, margin, drop = margin_drop) # determine need for marginalization
+  m <- snaputils:::.check_marginalize(data, margin, drop = margin_drop) # determine need for marginalization
   merge_vars <- !is.null(m) && !"" %in% m
   lev.rcps <- NULL
   base <- baseline_model %in% all_models
@@ -102,7 +103,8 @@ dist_data <- function(data, variable, margin = NULL, seed = NULL, metric = NULL,
     data.base <- dplyr::filter(data, .data[["Model"]] == baseline_model) %>%
       dplyr::mutate(Model = factor(.data[["Model"]], levels = lev.models)) %>%
       split(.[["Year"]]) %>% purrr::map(~rvtable::rvtable(.x))
-    data <- dplyr::filter(data, .data[["Model"]] != baseline_model)
+    if(!baseline_only) data <- dplyr::filter(data, .data[["Model"]] != baseline_model)
+
   }
   if(!merge_vars){
     n.factor <- if(limit_sample) samplesize_factor(data, baseline_model) else 1
@@ -118,36 +120,41 @@ dist_data <- function(data, variable, margin = NULL, seed = NULL, metric = NULL,
   }
   if(merge_vars){
     # marginalize (excludes baseline model and scenario, e.g. CRU and historical GCM, data)
-    msg <- "Integrating variables..."
     if(progress){
+      msg <- "Sampling distributions..."
       prog$set(0, message = msg, detail = NULL)
       n_steps_marginal <- if(length(m)) n_steps*length(m) else n_steps
     }
-    for(i in seq_along(m)){
-      for(j in seq_along(data)){
-        if(progress){
-          step <- step + 1
-          detail <- paste0("Marginalizing over ", m[i], "s: ", round(100*step/n_steps_marginal), "%")
-          if(step %% 5  ==  0 || step == n_steps_marginal) prog$set(step/n_steps_marginal, msg, detail)
+    if(!baseline_only){
+      for(i in seq_along(m)){
+        for(j in seq_along(data)){
+          if(progress){
+            step <- step + 1
+            detail <- paste0("Marginalizing over ", m[i], "s: ", round(100*step/n_steps_marginal), "%")
+            if(step %% 5  ==  0 || step == n_steps_marginal) prog$set(step/n_steps_marginal, msg, detail)
+          }
+          data[[j]] <- rvtable::marginalize(data[[j]], m[i], density.args = d.args, sample.args = s.args)
         }
-        data[[j]] <- rvtable::marginalize(data[[j]], m[i], density.args = d.args, sample.args = s.args)
       }
     }
   }
   if(merge_vars & base){
     # update factor levels (with baseline model data)
     data.base <- dplyr::bind_rows(data.base)
-    data <- dplyr::bind_rows(data) %>% dplyr::ungroup()
-    if("Model" %in% m) data <- dplyr::mutate(data, Model = factor(lev.models[-1], levels = lev.models))
+    if(!baseline_only){
+      data <- dplyr::bind_rows(data) %>% dplyr::ungroup()
+      if("Model" %in% m) data <- dplyr::mutate(data, Model = factor(lev.models[-1], levels = lev.models))
+    }
     if("RCP" %in% m){
       if(length(lev.rcps) == 1) lev.rcps <- rep(lev.rcps, 2) # historical always present
       if(nrow(data.base) > 0)
         data.base <- dplyr::mutate(data.base, RCP = factor(as.character(.data[["RCP"]]), levels = unique(lev.rcps)))
-      data <- dplyr::mutate(data, RCP = factor(
+      if(!baseline_only) data <- dplyr::mutate(data, RCP = factor(
         ifelse(.data[["Year"]] < rcp_min_yr, lev.rcps[1], lev.rcps[2]), unique(lev.rcps)))
     }
     n.factor <- if(limit_sample) samplesize_factor(data, baseline_model) else 1
-    data <- dplyr::bind_rows(data.base, data) %>% split(.[["Year"]]) %>% purrr::map(~rvtable::rvtable(.x))
+    data <- if(!baseline_only) dplyr::bind_rows(data.base, data) else data.base
+    data <- data %>% split(.[["Year"]]) %>% purrr::map(~rvtable::rvtable(.x))
   }
   if(progress){
     step <- 0

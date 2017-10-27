@@ -9,7 +9,8 @@ dist_data(data, variable, margin = NULL, seed = NULL, metric = NULL,
   composite = "Composite GCM", baseline_scenario = "Historical",
   general_scenario = "Projected", margin_drop = c(baseline_scenario,
   baseline_model), density_size = 200, margin_size = 100,
-  sample_size = margin_size, limit_sample = TRUE, progress = TRUE)
+  sample_size = margin_size, limit_sample = TRUE, baseline_only = FALSE,
+  progress = TRUE)
 }
 \arguments{
 \item{data}{a data frame. It does not need to be an \code{rvtable}-class data frame in advance, but it must be coercible to one.}
@@ -50,6 +51,8 @@ Defaults to the baseline scenario and baseline model.}
 \item{sample_size}{numeric, sample size for density estimations. Defaults to \code{margin.size}.}
 
 \item{limit_sample}{logical, see details.}
+
+\item{baseline_only}{logical, only processing baseline data set. Useful for climatology data.}
 
 \item{progress}{logical, include progress bar in app.}
 }
