@@ -11,3 +11,19 @@ NULL
 
 #' @importFrom magrittr %>%
 NULL
+
+#' Get a snaputils resource path
+#'
+#' Get a resource path in an app to local package resources.
+#'
+#' This function is called in the UI code of an app that relies \code{snaputils} package resources, typically image logos.
+#'
+#' @param type character, resource type. \code{"images"} is the only currently available resource type.
+#'
+#' @export
+#'
+#' @examples
+#' \dontrun{snapp_resources()}
+snap_res <- function(type = "images"){
+  system.file(file.path("res", type), package = "snaputils")
+}

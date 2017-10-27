@@ -1,3 +1,9 @@
+# snaputils 0.2.6 (Release date: 2017-10-27)
+
+* Ported SNAP-related image files to package.
+* Added `snap_res` function for obtaining resource path so that images can be easily accessed by other packages, apps and general R code.
+* Updated unit tests.
+
 # snaputils 0.2.5 (Release date: 2017-10-25)
 
 * Ported several functions from `apputils` and refactored code.

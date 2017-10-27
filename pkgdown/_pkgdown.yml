@@ -16,10 +16,11 @@ reference:
 - title: Package
   contents:
   - snaputils
-- title: Metadata
+- title: Metadata and helpers
   contents:
   - snapp_titles
   - snapp_urls
+  - snap_res
 - title: App information
   contents:
   - snapp_showcase

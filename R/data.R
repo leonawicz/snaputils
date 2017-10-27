@@ -82,7 +82,7 @@ dist_data <- function(data, variable, margin = NULL, seed = NULL, metric = NULL,
     stop(paste0("data must contain columns: ", paste(required_vars, collapse = ", "), "."))
   if(length(unique(data$Var)) > 1) stop("Data frame must contain only one 'Var' variable.")
   if(is.numeric(seed)) set.seed(seed)
-  m <- snaputils:::.check_marginalize(data, margin, drop = margin_drop) # determine need for marginalization
+  m <- .check_marginalize(data, margin, drop = margin_drop) # determine need for marginalization
   merge_vars <- !is.null(m) && !"" %in% m
   lev.rcps <- NULL
   base <- baseline_model %in% all_models
