@@ -23,7 +23,7 @@ NULL
 #' @export
 #'
 #' @examples
-#' \dontrun{snapp_resources()}
+#' \dontrun{snap_res()}
 snap_res <- function(type = "images"){
   system.file(file.path("res", type), package = "snaputils")
 }

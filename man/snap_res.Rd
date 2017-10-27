@@ -16,5 +16,5 @@ Get a resource path in an app to local package resources.
 This function is called in the UI code of an app that relies \code{snaputils} package resources, typically image logos.
 }
 \examples{
-\dontrun{snapp_resources()}
+\dontrun{snap_res()}
 }
