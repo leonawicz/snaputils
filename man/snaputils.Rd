@@ -4,8 +4,11 @@
 \name{snaputils}
 \alias{snaputils}
 \alias{snaputils-package}
-\title{SNAP-specific utilities for Shiny apps.}
+\title{snaputils: SNAP-specific utilities for Shiny apps.}
 \description{
-The \code{snaputils} package common utility functions, settings and references used across multiple Shiny apps
-specific to a SNAP context. This package inherents from the apputils package and is a satellite member of the SNAPverse collection of R packages.
+The \code{snaputils} package contains utilities for Shiny app development.
+The package inherits primarily from `apputils`, which contains common utility functions, settings and references for use across multiple Shiny apps.
+It also imports \code{maputils}. As the name suggests, \code{snaputils} is specific to a SNAP context. So is \code{maaputils} though separate.
+Only \code{apputils} has a more general non-SNAP context.
+All three packages are satellite members of the SNAPverse collection of R packages.
 }
