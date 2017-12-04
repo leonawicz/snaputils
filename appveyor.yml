@@ -22,6 +22,8 @@ environment:
 
 build_script:
   - travis-tool.sh install_github leonawicz/apputils
+  - travis-tool.sh install_github leonawicz/maputils
+  - travis-tool.sh install_github leonawicz/rvtable
   - travis-tool.sh install_deps
 
 test_script:

@@ -6,6 +6,8 @@ cache: packages
 
 r_github_packages:
   - leonawicz/apputils
+  - leonawicz/maputils
+  - leonawicz/rvtable
 
 after_success:
     - Rscript -e 'covr::codecov()'
