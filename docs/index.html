@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SNAP-Specific Utilities For Shiny Apps • snaputils</title>
+<title>SNAP-Specific Utilities for Shiny Apps • snaputils</title>
 <!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/sandstone/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
@@ -180,16 +180,15 @@
 <div class="page-header"><h1 class="hasAnchor">
 <a href="#snaputils" class="anchor"></a>snaputils</h1></div>
 
-<p><code>snaputils</code> contains utilities for Shiny app development. The package inherits primarily from <code>apputils</code>, which contains common utility functions, settings and references for use across multiple Shiny apps. It also imports <code>maputils</code>. As the name suggests, unlike the other two packages, <code>snaputils</code> is specific to a SNAP context. All three packages are satellite members of the SNAPverse collection of R packages.</p>
+<p><code>snaputils</code> contains utilities for Shiny app development. The package inherits primarily from <code>apputils</code>, which contains common utility functions, settings and references for use across multiple Shiny apps. It also imports <code>maputils</code>. As the name suggests, <code>snaputils</code> is specific to a SNAP context. So is <code>maputils</code> though separate. Only <code>apputils</code> has a more general non-SNAP context. All three packages are satellite members of the SNAPverse collection of R packages.</p>
 <p style="text-align:center;">
 <img src="reference/figures/sv_satellites_utils_snap.svg"></p>
-<div id="installation-and-bug-reporting" class="section level2">
+<div id="installation" class="section level2">
 <h2 class="hasAnchor">
-<a href="#installation-and-bug-reporting" class="anchor"></a>Installation and bug reporting</h2>
-<p>Install the latest development version from github with</p>
+<a href="#installation" class="anchor"></a>Installation</h2>
+<p>You can install maputils from github with:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="co"># install.packages('devtools')</span>
-devtools::<span class="kw">install_github</span>(<span class="st">"leonawicz/snaputils"</span>)</code></pre></div>
-<p>Please file a minimal reproducible example of any clear bug at <a href="https://github.com/leonawicz/snaputils/issues">github</a>.</p>
+devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"leonawicz/snaputils"</span>)</code></pre></div>
 </div>
 <div id="reference" class="section level2">
 <h2 class="hasAnchor">
