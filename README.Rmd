@@ -10,6 +10,7 @@ knitr::opts_chunk$set(
   message = FALSE, warning = FALSE, error = FALSE, tidy = TRUE
 )
 ```
+
 # snaputils
 
 [![Travis-CI Build Status](https://travis-ci.org/leonawicz/snaputils.svg?branch=master)](https://travis-ci.org/leonawicz/snaputils)
@@ -18,7 +19,8 @@ knitr::opts_chunk$set(
 
 `snaputils` contains utilities for Shiny app development.
 The package inherits primarily from `apputils`, which contains common utility functions, settings and references for use across multiple Shiny apps.
-It also imports `maputils`. As the name suggests, unlike the other two packages, `snaputils` is specific to a SNAP context. 
+It also imports `maputils`. As the name suggests, `snaputils` is specific to a SNAP context. So is `maputils` though separate.
+Only `apputils` has a more general non-SNAP context.
 All three packages are satellite members of the SNAPverse collection of R packages.
 
 ```{r is_md, echo = FALSE}
@@ -33,16 +35,14 @@ cat('<p style="text-align:center;"><img src="man/figures/sv_satellites_utils_sna
 cat('<p style="text-align:center;"><img src="man/figures/sv_satellites_utils_snap.svg"></p>')
 ```
 
-## Installation and bug reporting
+## Installation
 
-Install the latest development version from github with
+You can install maputils from github with:
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
 devtools::install_github("leonawicz/snaputils")
 ```
-
-Please file a minimal reproducible example of any clear bug at [github](https://github.com/leonawicz/snaputils/issues).
 
 ## Reference
 
