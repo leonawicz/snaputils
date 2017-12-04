@@ -17,7 +17,7 @@ ByteCompile: true
 Url: https://github.com/leonawicz/snaputils
 BugReports: https://github.com/leonawicz/snaputils/issues
 Imports: 
-    apputils
+    apputils,
 	  maputils,
     magrittr,
     dplyr,
