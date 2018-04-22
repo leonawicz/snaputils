@@ -58,7 +58,7 @@ snapp_metadata <- list(
   img_urls = c(
     "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/rvdist.jpg",
     "https://raw.githubusercontent.com/leonawicz/dash/master/images/_climdist_small.png",
-    "https://raw.githubusercontent.com/leonawicz/jfsp/master/_jfsp_small.png",
+    "https://raw.githubusercontent.com/leonawicz/jfsp-archive/master/_jfsp_small.png",
     "https://raw.githubusercontent.com/leonawicz/ar5eval/master/_ar5eval_small.png",
     "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/cc4liteFinal.jpg",
     "https://github.com/ua-snap/shiny-apps/raw/master/_images/small/ex_leaflet.jpg",
