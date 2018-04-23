@@ -120,6 +120,25 @@ snap_faqlist <- list(
                style = "text-align:justify")
     )
   ),
+  era40 = list(
+    "What is ERA-40?",
+    shiny::p("ERA 40 is a climate reanalysis data set.",
+             shiny::a("ERA 40 summary and data access", href = "https://climatedataguide.ucar.edu/climate-data/era40", target = "_blank"),
+             style = "text-align: justify;")
+  ),
+  eval_domains = list(
+    "The domain map shows one Alaska domain. What are the 'land' and 'ocean' domains?",
+    shiny::p("For land- and ocean-specific domains, the rectangle domain over Alaska is the same,
+             but the GCM and ERA-40 grid cells within that domain are subset to those exclusively over land or ocean, respectively.
+             This was done to investigate the potential influence on Alaska domain model selection
+                               of land vs. ocean grid cells in the analysis.", style="text-align: justify;")
+  ),
+  eval_composite = list(
+    "How are individual GCMs added to a composite?",
+    shiny::p("Individual GCM rankings determine the order in which GCMs are included in composite models of increasing of size.
+             Rank is based on mean annual estimated error for the selected climate variable over the selected
+             spatial domain using the selected error statistic.", style="text-align: justify;")
+  ),
   climdist_variables = list(
     "What do the available distributions represent?",
     shiny::p("Probability distributions are available for four random variables: total monthly precipitation and mean monthly
