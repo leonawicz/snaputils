@@ -4,11 +4,12 @@
 \alias{stat_boxes_group}
 \title{Generate a group of stat boxes sets.}
 \usage{
-stat_boxes_group(x, clrby, type = "annual", style = "valueBox", rnd = 0,
-  height = "110px", width.icon = "90px", text.size = 75,
+stat_boxes_group(x, clrby, type = "annual", style = "valueBox",
+  rnd = 0, height = "110px", width.icon = "90px", text.size = 75,
   value.size = 150, output = "boxes",
   main_title = "<h4>Aggregate period statistics</h4>",
-  clrs.default = list(c("light-blue", "blue")), prevent, theme = "white")
+  clrs.default = list(c("light-blue", "blue")), prevent,
+  theme = "white")
 }
 \arguments{
 \item{x}{a  master data frame, which may or may not be split into multiple groups, depending on \code{clrby}.}

@@ -4,8 +4,8 @@
 \alias{faq}
 \title{Generate a SNAP Frequently Asked Questions (FAQ) widget}
 \usage{
-faq(id, format = "bscollapse", bscollapse_args = list(id = "faq", open =
-  NULL, multiple = FALSE), showcase_args = list(drop = NULL))
+faq(id, format = "bscollapse", bscollapse_args = list(id = "faq", open
+  = NULL, multiple = FALSE), showcase_args = list(drop = NULL))
 }
 \arguments{
 \item{id}{character, the id for the \code{shinyBS::bsCollapse} element.}

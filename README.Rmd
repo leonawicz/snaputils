@@ -17,6 +17,10 @@ knitr::opts_chunk$set(
 [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/leonawicz/snaputils?branch=master&svg=true)](https://ci.appveyor.com/project/leonawicz/snaputils)
 [![Coverage Status](https://img.shields.io/codecov/c/github/leonawicz/snaputils/master.svg)](https://codecov.io/github/leonawicz/snaputils?branch=master)
 
+## SNAPverse R package ecosystem development frozen.
+
+*Development of the SNAPverse R package ecosystem has been frozen indefinitely. This project was never directly funded. I began it out of personal interest, but no longer work for SNAP. It will remain archived here for historical reference.*
+
 `snaputils` contains utilities for Shiny app development.
 The package inherits primarily from `apputils`, which contains common utility functions, settings and references for use across multiple Shiny apps.
 It also imports `maputils`. As the name suggests, `snaputils` is specific to a SNAP context. So is `maputils` though separate.
